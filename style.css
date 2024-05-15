@@ -1,0 +1,152 @@
+body {
+    font-family: 'Aptos', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #E9E9F6;
+    color: #0B032D;
+}
+
+#app {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #310D20;
+}
+
+h2 {
+    color: #621940;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    color: #0B032D;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #0B032D;
+}
+
+#task-list, #result-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.task-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+button.selected {
+    background-color: #F67E7D;
+    color: white;
+}
+
+.task-btn {
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    margin: 20px;
+    border: 2px solid lightgrey;
+}
+
+button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+    background-color: lightgrey;
+    color: white;
+}
+
+.next-btn {
+    background-color: #9090D4;
+    color: white;
+}
+
+.restart-btn {
+    background-color: #525252;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #7E5E60;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .task-column {
+        display: block;
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 20px);
+    }
+
+    .task-btn {
+        width: 100%;
+    }
+
+    .button-container {
+        display: block;
+        text-align: center;
+    }
+
+    .button-container button {
+        display: block;
+        width: calc(100% - 40px);
+        margin: 10px auto;
+    }
+}
