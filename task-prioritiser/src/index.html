@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Prioritizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Task Prioritizer</h1>
+        <div id="task-input">
+            <h2>Enter your tasks (up to 10)</h2>
+            <form id="task-form" onsubmit="return startComparisons()">
+                <div class="task-column">
+                    <input type="text" id="task1" placeholder="Enter a task"><br>
+                    <input type="text" id="task2" placeholder="Enter a task"><br>
+                    <input type="text" id="task3" placeholder="Enter a task"><br>
+                    <input type="text" id="task4" placeholder="Enter a task"><br>
+                    <input type="text" id="task5" placeholder="Enter a task"><br>
+                </div>
+                <div class="task-column">
+                    <input type="text" id="task6" placeholder="Enter a task"><br>
+                    <input type="text" id="task7" placeholder="Enter a task"><br>
+                    <input type="text" id="task8" placeholder="Enter a task"><br>
+                    <input type="text" id="task9" placeholder="Enter a task"><br>
+                    <input type="text" id="task10" placeholder="Enter a task"><br>
+                </div>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+        <div id="comparison" style="display: none;">
+            <h2>Which task is more important?</h2>
+            <button id="task1-btn" class="task-btn" onclick="selectTask(1)"></button>
+            <button id="task2-btn" class="task-btn" onclick="selectTask(2)"></button>
+            <br>
+            <button id="back-btn" onclick="previousComparison()">Back</button>
+            <button id="next-btn" onclick="nextComparison()">Next</button>
+            <br>
+            <button onclick="confirmRestart()">Restart Task List</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Task Rankings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ranking</th>
+                        <th>Task Name</th>
+                        <th>Points</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="result-list"></tbody>
+            </table>
+            <button onclick="window.print()">Print</button>
+            <button onclick="emailResults()">Email to Me</button>
+            <button onclick="confirmRestart()">Start Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
